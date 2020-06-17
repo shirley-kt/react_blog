@@ -7,14 +7,22 @@
 // Introduce methods from customize-cra
 const {
     override,
-    addLessLoader
+    addLessLoader,
+    fixBabelImports
 } = require('customize-cra')
+
+const modifyVars = require('./lessVars')
 
 module.exports = override(
     addLessLoader({
         lessOptions: {
             javascriptEnabled: true,
-            modifyVars: { '@primary-color': '#1DA57A' },
+            modifyVars
         }
+    }),
+    fixBabelImports('import', {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: true
     })
 )
