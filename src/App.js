@@ -4,20 +4,20 @@ import {
     Button
 } from 'antd'
 
-const testHOC = (WrappedComponent) => {
-    return class HOCComponent extends Component {
-        render() {
-            return (
-                <>
-                    <WrappedComponent />
-                    <div>HOC</div>
-                </>
-            )
-        }
-    }
-}
+// const testHOC = (WrappedComponent) => {
+//     return class HOCComponent extends Component {
+//         render() {
+//             return (
+//                 <>
+//                     <WrappedComponent />
+//                     <div>HOC</div>
+//                 </>
+//             )
+//         }
+//     }
+// }
 
-@testHOC
+// @testHOC
 class App extends Component {
     render() {
         return (
