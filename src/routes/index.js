@@ -26,6 +26,6 @@ export const adminRouter = [{
     component: ArticleList,
     exact: true
 }, {
-    pathname: '/admin/article/edit/:id',
+    pathname: '/admin/edit',
     component: ArticleEdit
 },]
